@@ -12,17 +12,8 @@ export default function Home() {
       content: "Se manifiesta a través de actos de violencia simbólica, política, psicológica, patrimonial, económica, física, sexual, laboral, obstétrica, mediática, digital, entre otras, que buscan menoscabar la participación política de las mujeres y su ejercicio de derechos políticos y electorales."
     },
     {
-      title: "¿Cómo funciona este acordeón?",
-      content: (
-        <div>
-          <p className="mb-2">Este acordeón está construido con:</p>
-          <ul className="list-disc pl-5">
-            <li>React/Next.js</li>
-            <li>Tailwind CSS</li>
-            <li>Gestión de estado con useState</li>
-          </ul>
-        </div>
-      )
+      title: "3. Violencia psicológica",
+      content: "Se manifiesta a través de actos de intimidación, manipulación, amenaza, humillación, acoso, hostigamiento, discriminación, entre otros, que buscan menoscabar la autoestima, la dignidad, la integridad, la libertad, la autonomía, la seguridad, la salud mental y emocional de las mujeres."
     }
   ];
 

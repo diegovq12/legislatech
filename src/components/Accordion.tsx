@@ -25,9 +25,9 @@ const Accordion: React.FC<AccordionProps> = ({ items }) => {
                         onClick={() => toggleAccordion(index)}
                         className="flex items-center justify-between w-full p-5 font-medium text-gray-500 hover:bg-gray-100"
                     >
-                        <span className="fw-bold">{item.title}</span>
+                        <span className="fw-bold text-2xl ml-4">{item.title}</span>
                         <svg
-                            className={`w-3 h-3 transition-transform duration-800 ${openIndex === index ? 'rotate-180' : ''
+                            className={`w-3 h-3 transition-transform duration-800 ${openIndex === index ? '' : 'rotate-180'
                                 }`}
                             aria-hidden="true"
                             xmlns="http://www.w3.org/2000/svg"
@@ -47,7 +47,7 @@ const Accordion: React.FC<AccordionProps> = ({ items }) => {
                         className={`overflow-hidden transition-max-height duration-650 ease-in-out ${openIndex === index ? 'max-h-screen' : 'max-h-0'
                             }`}
                     >
-                        <div className="p-5 border-t border-gray-200">
+                        <div className="p-5 text-xl border-t border-gray-200">
                             {typeof item.content === 'string' ? (
                                 <p className="text-gray-500">{item.content}</p>
                             ) : (
