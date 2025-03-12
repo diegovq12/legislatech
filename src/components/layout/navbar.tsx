@@ -8,7 +8,7 @@ enum Routes {
     HOME = '/',
     CHATBOT = '/chatbot',
     RECURSOS = '/recursos',
-    CONTACTO = '/contacto'
+    FORO = '/foro'
 }
 
 // Interface para los items del menú
@@ -22,7 +22,7 @@ const menuItems: MenuItem[] = [
     { name: 'Inicio', path: Routes.HOME },
     { name: 'Chatbot', path: Routes.CHATBOT },
     { name: 'Recursos', path: Routes.RECURSOS },
-    { name: 'Contacto', path: Routes.CONTACTO }
+    { name: 'Foro', path: Routes.FORO }
 ]
 
 export default function Navbar() {
