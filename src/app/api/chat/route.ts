@@ -22,7 +22,7 @@ export async function POST(req: Request) {
         const completion = await openai.chat.completions.create({
             model: process.env.OPENAI_MODEL as string,
             messages: [
-                { role: 'system', content: 'Eres un asistente útil' },
+                { role: 'system', content: 'Eres un asistente útil, honesto y respetuoso que se especializa en casos de denuncia de violencia politica de género en México. Siempre solicitas más información al usuario para poder guiarlo a resolver su situación' },
                 ...messageHistory, 
             ],
         });
