@@ -1,63 +1,84 @@
-"use client"
+// components/Sidebar.js
+import React from 'react';
 
-import { useState } from "react"
-import { MapPin, Calendar, Grid3X3, Search, Filter } from "lucide-react"
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Checkbox } from "@/components/ui/checkbox"
-import { Button } from "@/components/ui/button"
-
-interface ForumSidebarProps {
-  activeFilters: string[]
-  searchQuery: string
-  toggleFilter: (filter: string) => void
-  clearFilters: () => void
-  setSearchQuery: (query: string) => void
-}
-
-export default function ForumSidebar({
-  activeFilters,
-  searchQuery,
-  toggleFilter,
-  clearFilters,
-  setSearchQuery
-}: ForumSidebarProps) {
+const Sidebar = () => {
   return (
-    <Card>
-      <CardHeader className="bg-pink-50">
-        <CardTitle className="text-pink-600 flex items-center gap-2">
-          <Filter className="h-5 w-5" />
-          Filters
-        </CardTitle>
-      </CardHeader>
-      <CardContent className="p-4">
-        {/* Similar content to the original sidebar */}
-        {/* Implement the search, state, municipality, year, and module filters */}
-        <div className="space-y-6">
-          <div className="space-y-2">
-            <h3 className="text-sm font-medium">Search</h3>
-            <div className="relative">
-              <Search className="absolute left-2 top-2.5 h-4 w-4 text-gray-400" />
-              <Input
-                placeholder="Search testimonials..."
-                className="pl-8"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-              />
-            </div>
-          </div>
-
-          {/* Add other filter sections similar to the original code */}
-          
-          <Button
-            variant="outline"
-            className="w-full border-pink-200 text-pink-600 hover:bg-pink-50"
-            onClick={clearFilters}
-          >
-            Clear All Filters
-          </Button>
+    <div className="w-64 p-6 bg-pink-50 shadow-lg rounded-lg mt-5 ml-10">
+      <h2 className="text-2xl font-bold text-pink-600 mb-6">Filtros</h2>
+      <div className="mb-6">
+        <input
+          type="text"
+          placeholder="Buscar testimonios"
+          className="w-full p-2 border border-pink-300 rounded focus:outline-none focus:ring-2 focus:ring-pink-500"
+        />
+      </div>
+      <div className="mb-6">
+        <h3 className="font-semibold text-pink-600 mb-2">Estado</h3>
+        <div className="space-y-2">
+          <label className="flex items-center">
+            <input type="checkbox" className="mr-2" /> Baja California
+          </label>
+          <label className="flex items-center">
+            <input type="checkbox" className="mr-2" /> Sonora
+          </label>
+          <label className="flex items-center">
+            <input type="checkbox" className="mr-2" /> Chihuahua
+          </label>
+          <label className="flex items-center">
+            <input type="checkbox" className="mr-2" /> Nuevo Leon
+          </label>
         </div>
-      </CardContent>
-    </Card>
-  )
-}
+      </div>
+      <div className="mb-6">
+        <h3 className="font-semibold text-pink-600 mb-2">Municipio</h3>
+        <div className="space-y-2">
+          <label className="flex items-center">
+            <input type="checkbox" className="mr-2" /> Ensenada
+          </label>
+          <label className="flex items-center">
+            <input type="checkbox" className="mr-2" /> Tijuana
+          </label>
+          <label className="flex items-center">
+            <input type="checkbox" className="mr-2" /> Mexicali
+          </label>
+          <label className="flex items-center">
+            <input type="checkbox" className="mr-2" /> Monterrey
+          </label>
+        </div>
+      </div>
+      <div className="mb-6">
+        <h3 className="font-semibold text-pink-600 mb-2">Año</h3>
+        <div className="space-y-2">
+          <label className="flex items-center">
+            <input type="checkbox" className="mr-2" /> 2025
+          </label>
+          <label className="flex items-center">
+            <input type="checkbox" className="mr-2" /> 2024
+          </label>
+          <label className="flex items-center">
+            <input type="checkbox" className="mr-2" /> 2023
+          </label>
+          <label className="flex items-center">
+            <input type="checkbox" className="mr-2" /> 2022
+          </label>
+        </div>
+      </div>
+      <div>
+        <h3 className="font-semibold text-pink-600 mb-2">Módulo</h3>
+        <div className="space-y-2">
+          <label className="flex items-center">
+            <input type="checkbox" className="mr-2" /> Proceso electoral
+          </label>
+          <label className="flex items-center">
+            <input type="checkbox" className="mr-2" /> Violencia digital
+          </label>
+          <label className="flex items-center">
+            <input type="checkbox" className="mr-2" /> Seguridad
+          </label>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Sidebar;

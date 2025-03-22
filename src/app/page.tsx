@@ -5,19 +5,33 @@ import GraficaViolencia from "./components/grafica";
 export default function Home() {
   const accordionItems = [
     {
-      title: "1. Violencia simbólica",
-      content: "Se manifiesta a través de mensajes, imágenes, signos, objetos, tradiciones, valores, normas, reglas, estereotipos, entre otros, que transmiten y reproducen relaciones de dominación, desigualdad y discriminación."
+      title: "1. Violencia psicológica",
+      content: "Cualquier acto u omisión en el ámbito político que daña la estabilidad psicológica de una mujer. Esto incluye insultos, humillaciones, marginación, amenazas o cualquier acción que busque menoscabar su autoestima y capacidad de ejercer sus derechos político-electorales."
     },
     {
-      title: "2. Violencia política",
-      content: "Se manifiesta a través de actos de violencia simbólica, política, psicológica, patrimonial, económica, física, sexual, laboral, obstétrica, mediática, digital, entre otras, que buscan menoscabar la participación política de las mujeres y su ejercicio de derechos políticos y electorales."
+      title: "2. Violencia física",
+      content: "Cualquier acto de agresión física en el contexto político, como empujones, golpes o el uso de fuerza para intimidar o impedir que una mujer participe en actividades políticas o ejerza su cargo público."
     },
     {
-      title: "3. Violencia psicológica",
-      content: "Se manifiesta a través de actos de intimidación, manipulación, amenaza, humillación, acoso, hostigamiento, discriminación, entre otros, que buscan menoscabar la autoestima, la dignidad, la integridad, la libertad, la autonomía, la seguridad, la salud mental y emocional de las mujeres."
-    }
-  ];
+      title: "3. Violencia patrimonial",
+      content: "Actos u omisiones que afectan los recursos materiales o bienes de una mujer en el ámbito político, como la retención de documentos necesarios para su participación electoral, la destrucción de propaganda política o la obstrucción de recursos destinados a su campaña."
+    },
+    {
+      title: "4. Violencia económica",
+      content: "Acciones que buscan limitar o controlar los recursos económicos de una mujer en el contexto político, como negarle financiamiento para su campaña, asignarle un salario menor en comparación con sus colegas hombres o restringir el acceso a fondos públicos."
+    },
 
+    {
+      title: "5. Violencia sexual",
+      content: "Cualquier acto que degrade o dañe la integridad física y sexual de una mujer en el ámbito político, como acoso, insinuaciones sexuales no deseadas o cualquier forma de abuso que busque intimidarla o deslegitimar su participación política."
+    }, {
+      title: "6. Violencia simbólica",
+      content: "Manifestaciones que promueven estereotipos de género, desvalorizan las capacidades de las mujeres en política o reproducen roles y situaciones de subordinación a través de imágenes, mensajes o representaciones que transmiten y reproducen relaciones de dominación y desigualdad."
+    }, {
+      title: "7. Violencia feminicida",
+      content: "La forma más extrema de violencia política de género, manifestada en el asesinato de mujeres por razones de género, especialmente cuando estas ocupan cargos públicos o participan activamente en la política, como resultado de un contexto de discriminación y misoginia."
+    },
+  ];
   return (
     <div className="relative">
       {/* Fondo de bgibelik*/}
@@ -44,7 +58,7 @@ export default function Home() {
 
       <div className="container mx-auto p-8">
         <h2 className="text-3xl font-bold mb-4 p-2 self-start">
-          Puedes identificar la Violencia política de género de las siguientes maneras
+          Puedes identificar la Violencia política de género de las siguientes maneras:
         </h2>
         <Accordion items={accordionItems} />
       </div>
@@ -87,12 +101,12 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="container mx-auto flex flex-col justify-center items-center p-6 rounded-lg shadow-lg">
+      <div className="container mx-auto flex flex-col justify-center items-center p-6 rounded-lg shadow-lg my-10">
         <h2 className="text-3xl font-bold mb-4 self-start ml-4">
           Gráfica de tipos de Violencia política de género
         </h2>
         <GraficaViolencia />
-        <p className="text-gray-500 mt-2 self-end">Fuente: Base de datos Noria--MXAC sobre violencia politica y electoral en México 2021.</p>
+        <p className="text-gray-500 mt-2 self-end">Fuente: Base de datos Noria--MXAC sobre violencia política y electoral en México 2021.</p>
       </div>
 
       {/* Ayuda aqui debera ir algo como de informacion de contacto que te redigira a una pagina para poder llenar un formato de denuncia

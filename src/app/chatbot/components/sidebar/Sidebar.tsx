@@ -6,8 +6,8 @@ const recursosEjemplo: RecursoApoyoType[] = [
     {
         titulo: "Línea Nacional contra la Violencia de Género",
         descripcion: "Servicio de atención 24/7 para emergencias",
-        telefono: "911",
-        correo: "ayuda@ejemplo.com",
+        telefono: "55 5322 4200",
+        correo: "contacto@inmujeres.gob.mx",
         link: "https://www.gob.mx/inmujeres/en"
     },
     {
@@ -20,7 +20,7 @@ const recursosEjemplo: RecursoApoyoType[] = [
     {
         titulo: "Red Nacional de Refugios",
         descripcion: "Refugios para mujeres en situación de violencia",
-        telefono: "800 123 4567",
+        telefono: "(686)5586364",
         correo: "ejemplocjm@gmail.com",
         link: "https://www.gob.mx/inmujeres/en"
     }
