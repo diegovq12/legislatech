@@ -7,7 +7,7 @@ const openai = new OpenAI({
 
 import { ChatCompletionMessageParam } from 'openai/resources/chat/completions';
 
-let messageHistory: ChatCompletionMessageParam[] = [];
+const messageHistory: ChatCompletionMessageParam[] = [];
 
 export async function POST(req: Request) {
     try {
